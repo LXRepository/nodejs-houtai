@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>拉勾网.职位管理</title>
+	<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/css/common.css">
+</head>
+<body style="padding: 0 100px">
+	<div class="header"></div>
+<!-- 标签页 -->
+<div class="tab-content">
+   
+
+ </div>
+
+<div role="tabpanel" class="tab-pane table-responsive" id="profile" style="padding: 0 50px;">
+<div class="addpro">
+	<span>职位管理</span>
+	<button type="button" class="btn btn-primary btn-add" data-toggle="modal" data-target="#addmyModal">添加</button>
+</div>
+<table class="table table-bordered pos_table" style="margin-bottom:0px">
+	<thead>
+		<tr>
+			<td>序号</td>
+			<td>公司logo</td>
+			<td>职位名称</td>
+			<td>公司名称</td>
+			<td>工作经验</td>
+			<td>职位类型</td>
+			<td>工作地点</td>
+			<td>职位薪资</td>
+			<td colspan="2">操作</td>
+		</tr>
+	</thead>
+	<tbody>
+		
+	</tbody>
+
+</table>
+<nav aria-label="Page navigation" class="navn">
+	<ul class="pagination">
+		<li class="disabled">
+      <span>
+        <span aria-hidden="true">&laquo;</span>
+      </span>
+    </li>
+		<li class="active"><a href="#">1</a></li>
+		<li><a href="#">2</a></li>
+		<li><a href="#">3</a></li>
+		<li><a href="#">4</a></li>
+		<li><a href="#">5</a></li>
+		 <li>
+      <a href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+	</ul>
+</nav>
+</div>
+
+<script type="text/html" id="prodition_list_temp">
+	{{each list pos index}}
+	 <tr>
+      <td class="pos_id  hide" >{{pos._id}}</td>
+      <td>{{index+1}}</td>
+      <td><img src="{{pos.logo}}"></td>
+      <td>{{pos.position}}</td>
+      <td>{{pos.company}}</td>
+      <td>{{pos.salary}}</td>
+      <td>{{pos.salary}}</td>
+      <td>{{pos.salary}}</td>
+      <td>{{pos.salary}}</td>          
+      <td class="revise_tab"><a href="#" data-toggle="modal" data-target="#updatemyModal">修改</a></td>
+      <td class="delte_tab"><a href="#">删除</a></td>
+   </tr>
+   {{/each}}
+</script>
+
+<!-- 模态框 -->
+<div class="modal fade" id="addmyModal">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+				<h4 class="modal-title" id="addPosModalLabel">添加职位</h4>
+			</div>
+			<div class="modal-body">
+				<div class="alert alert-danger hide add_pos_error" role="alert">职位添加失败，请稍后重试...</div>
+				<form class="add_pos_form">
+					<div class="form-group">
+						<label for="addPosLogo">Logo</label>
+						<input type="file" class="form-control" name="logo" id="addPosLogo">
+					</div>
+					<div class="form-group">
+						<label for="addPosName">职位名称</label>
+						<input type="text" class="form-control" name="position" id="addPosName" placeholder="请输入职位名称">
+					</div>
+					<div class="form-group">
+						<label for="addPosCompany">公司名称</label>
+						<input type="text" class="form-control" name="company" id="addPosCompany" placeholder="请输入公司名称">
+					</div>
+					<div class="form-group">
+						<label for="addPosSalary">薪资</label>
+						<input type="text" class="form-control" name="salary" id="addPosSalary" placeholder="请输入薪资">
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+				<button type="button" class="btn btn-primary btn_add">添加</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 模态框 -->
+<div class="modal fade" id="updatemyModal">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+				<h4 class="modal-title" id="addPosModalLabel">添加职位</h4>
+			</div>
+			<div class="modal-body">
+				<div class="alert alert-danger hide add_pos_error" role="alert">职位添加失败，请稍后重试...</div>
+				<form class="update_pos_form">
+					<input type="hidden" name="_id" id="_id" class="modelid">
+					<div class="form-group">
+						<label for="addPosLogo">Logo</label>
+						<input type="file" class="form-control" name="logo" id="addPosLogos">
+					</div>
+					<div class="form-group">
+						<label for="addPosName">职位名称</label>
+						<input type="text" class="form-control" name="position" id="addPosNames" placeholder="请输入职位名称">
+					</div>
+					<div class="form-group">
+						<label for="addPosCompany">公司名称</label>
+						<input type="text" class="form-control" name="company" id="addPosCompanys" placeholder="请输入公司名称">
+					</div>
+					<div class="form-group">
+						<label for="addPosSalary">薪资</label>
+						<input type="text" class="form-control" name="salary" id="addPosSalarys" placeholder="请输入薪资">
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+				<button type="button" class="btn btn-primary upd_btn">添加</button>
+			</div>
+		</div>
+	</div>
+</div>
+	
+</body>
+<script src="/lib/jquery/jquery-1.12.4.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="/lib/artTemplate/template-web.js"></script>
+<script src="/js/common/loginmodel.js"></script>
+<script src="/js/common/register.js"></script>
+<script src="/js/common/header.js"></script>
+<script src="/js/prodition/prodition.js"></script>
+</html>

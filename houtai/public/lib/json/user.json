@@ -1,0 +1,18 @@
+{
+	"res_code":0,
+	"res_error":"",
+	"res_body": {
+		"list" : [
+				{"id": 1, "img":"/images/tj.jpg", "position":"wwwww", "comname":"eeeee", "jinyan":"threeyears", "kind":"working", "add":"chengdu", "money":"15000", "doit":"修改", "del": "删除"},
+				{"id": 2, "img":"/images/tj.jpg", "position":"wwwww", "comname":"eeeee", "jinyan":"threeyears", "kind":"working", "add":"chengdu", "money":"15000", "doit":"修改", "del": "删除"},
+				{"id": 3, "img":"/images/tj.jpg", "position":"wwwww", "comname":"eeeee", "jinyan":"threeyears", "kind":"working", "add":"chengdu", "money":"15000", "doit":"修改", "del": "删除"},
+				{"id": 4, "img":"/images/tj.jpg", "position":"wwwww", "comname":"eeeee", "jinyan":"threeyears", "kind":"working", "add":"chengdu", "money":"15000", "doit":"修改", "del": "删除"},
+				{"id": 5, "img":"/images/tj.jpg", "position":"wwwww", "comname":"eeeee", "jinyan":"threeyears", "kind":"working", "add":"chengdu", "money":"15000", "doit":"修改", "del": "删除"},
+				{"id": 6, "img":"/images/tj.jpg", "position":"wwwww", "comname":"eeeee", "jinyan":"threeyears", "kind":"working", "add":"chengdu", "money":"15000", "doit":"修改", "del": "删除"},
+				{"id": 7, "img":"/images/tj.jpg", "position":"wwwww", "comname":"eeeee", "jinyan":"threeyears", "kind":"working", "add":"chengdu", "money":"15000", "doit":"修改", "del": "删除"},
+				{"id": 8, "img":"/images/tj.jpg", "position":"wwwww", "comname":"eeeee", "jinyan":"threeyears", "kind":"working", "add":"chengdu", "money":"15000", "doit":"修改", "del": "删除"},
+				{"id": 9, "img":"/images/tj.jpg", "position":"wwwww", "comname":"eeeee", "jinyan":"threeyears", "kind":"working", "add":"chengdu", "money":"15000", "doit":"修改", "del": "删除"},
+				{"id": 10, "img":"/images/tj.jpg", "position":"wwwww", "comname":"eeeee", "jinyan":"threeyears", "kind":"working", "add":"chengdu", "money":"15000", "doit":"修改", "del": "删除"}
+		]
+	}
+}
